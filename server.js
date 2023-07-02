@@ -1,7 +1,10 @@
 const express = require('express');
+const serverConfig = require('./configs/server_config')
+
 
 const app = express();
+const port = serverConfig.PORT;
 
-app.listen(3333, ()=>{
-    console.log("sarver started");
+app.listen(port, ()=>{
+    console.log(`sarver started on the port number ${port}`);
 })
